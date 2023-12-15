@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">json-c
-   &#160;<span id="projectnumber">0.15</span>
+   &#160;<span id="projectnumber">0.17</span>
    </div>
   </td>
  </tr>
@@ -80,6 +80,9 @@
 <li>array_list_get_idx()
 : <a class="el" href="arraylist_8h.html#a114f1af5b20b76a3dbb2d1d055006df8">arraylist.h</a>
 </li>
+<li>array_list_insert_idx()
+: <a class="el" href="arraylist_8h.html#ad6f20316519b3dafec557368ee5c6cf3">arraylist.h</a>
+</li>
 <li>array_list_length()
 : <a class="el" href="arraylist_8h.html#aa3bf90f47aa210032304b14e7ad09ef7">arraylist.h</a>
 </li>
@@ -102,8 +105,8 @@
 
 
 <h3><a class="anchor" id="index_j"></a>- j -</h3><ul>
-<li>JSON_C_CONST_FUNCTION()
-: <a class="el" href="json__object_8h.html#a922b2d76c73da57174beec82d471743b">json_object.h</a>
+<li>json_c_object_sizeof()
+: <a class="el" href="json__object_8h.html#af50be932ec85694ae40141b46901bd00">json_object.h</a>
 </li>
 <li>json_c_set_serialization_double_format()
 : <a class="el" href="json__object_8h.html#ac099272b46fde595831118720b155656">json_object.h</a>
@@ -131,6 +134,9 @@
 </li>
 <li>json_object_array_get_idx()
 : <a class="el" href="json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19">json_object.h</a>
+</li>
+<li>json_object_array_insert_idx()
+: <a class="el" href="json__object_8h.html#ae40a00944afd41c9a463c6d9e8256f3b">json_object.h</a>
 </li>
 <li>json_object_array_length()
 : <a class="el" href="json__object_8h.html#ab9ea8f9c72d5adf83fdcbfe69f97fa44">json_object.h</a>
@@ -336,14 +342,23 @@
 <li>json_parse_uint64()
 : <a class="el" href="json__util_8h.html#a94c2340c1344d57f7aa067f2dd0407f9">json_util.h</a>
 </li>
+<li>json_patch_apply()
+: <a class="el" href="json__patch_8h.html#a134aaed1e732d029d34ce2d605f9ac8d">json_patch.h</a>
+</li>
 <li>json_pointer_get()
 : <a class="el" href="json__pointer_8h.html#aff88937e32b0ba6ffbd07cb4b1919053">json_pointer.h</a>
+</li>
+<li>json_pointer_get_internal()
+: <a class="el" href="json__pointer__private_8h.html#a0de79c3e3e33f897ba9db340d7372b64">json_pointer_private.h</a>
 </li>
 <li>json_pointer_getf()
 : <a class="el" href="json__pointer_8h.html#af0ac03df64b215d05041e8007ed0233d">json_pointer.h</a>
 </li>
 <li>json_pointer_set()
 : <a class="el" href="json__pointer_8h.html#aef0e651f63ce5ce35648503705e2586b">json_pointer.h</a>
+</li>
+<li>json_pointer_set_with_array_cb()
+: <a class="el" href="json__pointer__private_8h.html#a0ac7b6b8de2336f8cd463687d7c148d2">json_pointer_private.h</a>
 </li>
 <li>json_pointer_setf()
 : <a class="el" href="json__pointer_8h.html#a66f1f98a2ce085c19f6750193b4c726d">json_pointer.h</a>
@@ -391,6 +406,27 @@
 
 
 <h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>lh_entry_k()
+: <a class="el" href="linkhash_8h.html#a82e5d699ba2fd4c520352c003f8554a5">linkhash.h</a>
+</li>
+<li>lh_entry_k_is_constant()
+: <a class="el" href="linkhash_8h.html#a724c308f1c606271ea3deb01ed9e3cc9">linkhash.h</a>
+</li>
+<li>lh_entry_next()
+: <a class="el" href="linkhash_8h.html#a603f6f2cc6d292a160b09b357c7a0a69">linkhash.h</a>
+</li>
+<li>lh_entry_prev()
+: <a class="el" href="linkhash_8h.html#a965145d36d3e00eae825c692205d2f81">linkhash.h</a>
+</li>
+<li>lh_entry_set_val()
+: <a class="el" href="linkhash_8h.html#ad94e87a8ef92ee6371e5314b7241e635">linkhash.h</a>
+</li>
+<li>lh_entry_v()
+: <a class="el" href="linkhash_8h.html#ab163f65568af863f3738ccd05900745e">linkhash.h</a>
+</li>
+<li>lh_get_hash()
+: <a class="el" href="linkhash_8h.html#a33c74c884530d407d0b3baa365238fb4">linkhash.h</a>
+</li>
 <li>lh_kchar_table_new()
 : <a class="el" href="linkhash_8h.html#a6bf630754affe92612639542a6c49c3f">linkhash.h</a>
 </li>
@@ -405,6 +441,9 @@
 </li>
 <li>lh_table_free()
 : <a class="el" href="linkhash_8h.html#a81653acf740cf8c9fe672e6cd16df0cf">linkhash.h</a>
+</li>
+<li>lh_table_head()
+: <a class="el" href="linkhash_8h.html#a3bacf1f7c40830c20440fd95d493f35f">linkhash.h</a>
 </li>
 <li>lh_table_insert()
 : <a class="el" href="linkhash_8h.html#a86c0cd547be1e2c2486a73bd58e1352c">linkhash.h</a>
@@ -460,7 +499,7 @@
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 15:11:19 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 12 2023 18:59:55 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
