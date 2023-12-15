@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>json-c: /home/erh/json-c-0.15/json_object.h File Reference</title>
+<title>json-c: json_object.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">json-c
-   &#160;<span id="projectnumber">0.15</span>
+   &#160;<span id="projectnumber">0.17</span>
    </div>
   </td>
  </tr>
@@ -40,10 +40,6 @@
       <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_71f13e590eb9d766c31051438785ada5.html">json-c-0.15</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -77,9 +73,13 @@ Macros</h2></td></tr>
 <tr class="separator:a34f027c147babf69fc530d088f2b49b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c11d72c55f3ab7c088f19e7bf118163"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a5c11d72c55f3ab7c088f19e7bf118163">JSON_C_TO_STRING_NOSLASHESCAPE</a>&#160;&#160;&#160;(1 &lt;&lt; 4)</td></tr>
 <tr class="separator:a5c11d72c55f3ab7c088f19e7bf118163"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a195258c9acc1f8a216d7c9528b00d450"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a195258c9acc1f8a216d7c9528b00d450">JSON_C_TO_STRING_COLOR</a>&#160;&#160;&#160;(1 &lt;&lt; 5)</td></tr>
+<tr class="separator:a195258c9acc1f8a216d7c9528b00d450"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cd01c484155ac99043a35b7c85ae411"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a8cd01c484155ac99043a35b7c85ae411">JSON_C_OBJECT_ADD_KEY_IS_NEW</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
 <tr class="separator:a8cd01c484155ac99043a35b7c85ae411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a134ffafc6116799a20134dc7646b5a37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a134ffafc6116799a20134dc7646b5a37">JSON_C_OBJECT_KEY_IS_CONSTANT</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="memitem:a4d303af657ca4ee8e487366ba9692c94"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a4d303af657ca4ee8e487366ba9692c94">JSON_C_OBJECT_ADD_CONSTANT_KEY</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:a4d303af657ca4ee8e487366ba9692c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134ffafc6116799a20134dc7646b5a37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a134ffafc6116799a20134dc7646b5a37">JSON_C_OBJECT_KEY_IS_CONSTANT</a>&#160;&#160;&#160;<a class="el" href="json__object_8h.html#a4d303af657ca4ee8e487366ba9692c94">JSON_C_OBJECT_ADD_CONSTANT_KEY</a></td></tr>
 <tr class="separator:a134ffafc6116799a20134dc7646b5a37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45837b8c6564f9e605f8a2bc76243750"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a45837b8c6564f9e605f8a2bc76243750">JSON_C_OPTION_GLOBAL</a>&#160;&#160;&#160;(0)</td></tr>
 <tr class="separator:a45837b8c6564f9e605f8a2bc76243750"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,8 +123,8 @@ Functions</h2></td></tr>
 <tr class="separator:a2caa52ae1863bd073444f3737138a4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad59a0ad2ec914a5eef90af53acae06d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#ad59a0ad2ec914a5eef90af53acae06d9">json_object_object_length</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
 <tr class="separator:ad59a0ad2ec914a5eef90af53acae06d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a922b2d76c73da57174beec82d471743b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a922b2d76c73da57174beec82d471743b">JSON_C_CONST_FUNCTION</a> (<a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> size_t json_c_object_sizeof(void))</td></tr>
-<tr class="separator:a922b2d76c73da57174beec82d471743b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af50be932ec85694ae40141b46901bd00"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#af50be932ec85694ae40141b46901bd00">json_c_object_sizeof</a> (void)</td></tr>
+<tr class="separator:af50be932ec85694ae40141b46901bd00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27bd808a022251059a43f1f6370441cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a27bd808a022251059a43f1f6370441cd">json_object_object_add</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, const char *key, struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *val)</td></tr>
 <tr class="separator:a27bd808a022251059a43f1f6370441cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57d3e444dd7db6b4510d21bf3716a002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a57d3e444dd7db6b4510d21bf3716a002">json_object_object_add_ex</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, const char *const key, struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *const val, const unsigned opts)</td></tr>
@@ -151,6 +151,8 @@ Functions</h2></td></tr>
 <tr class="separator:a18cdd9a7455e09f36cdf6e5756b7f586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ac0ccdbc13a25da7d8b2dc9e421dfad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad">json_object_array_put_idx</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, size_t idx, struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *val)</td></tr>
 <tr class="separator:a1ac0ccdbc13a25da7d8b2dc9e421dfad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae40a00944afd41c9a463c6d9e8256f3b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#ae40a00944afd41c9a463c6d9e8256f3b">json_object_array_insert_idx</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, size_t idx, struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *val)</td></tr>
+<tr class="separator:ae40a00944afd41c9a463c6d9e8256f3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a676711a76545d4ec65cc75f100f5fd19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19">json_object_array_get_idx</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, size_t idx)</td></tr>
 <tr class="separator:a676711a76545d4ec65cc75f100f5fd19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a722eca9f578704d3af38b97549242c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a722eca9f578704d3af38b97549242c1f">json_object_array_del_idx</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, size_t idx, size_t count)</td></tr>
@@ -163,25 +165,25 @@ Functions</h2></td></tr>
 <tr class="separator:ac003fb99db7ecd674bb16d983d2f92ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23863c1503f3a8dd8a460a6405da0a65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a23863c1503f3a8dd8a460a6405da0a65">json_object_set_boolean</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, <a class="el" href="json__types_8h.html#a81f02022906fafc71eb9197049f07f73">json_bool</a> new_value)</td></tr>
 <tr class="separator:a23863c1503f3a8dd8a460a6405da0a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae92f0770fb4b3c884ce35de52d3d7de8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#ae92f0770fb4b3c884ce35de52d3d7de8">json_object_new_int</a> (int32_t i)</td></tr>
+<tr class="memitem:ae92f0770fb4b3c884ce35de52d3d7de8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#ae92f0770fb4b3c884ce35de52d3d7de8">json_object_new_int</a> (<a class="el" href="json__inttypes_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> i)</td></tr>
 <tr class="separator:ae92f0770fb4b3c884ce35de52d3d7de8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7847f74494645c2b076505c37cc4cb93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a7847f74494645c2b076505c37cc4cb93">json_object_new_int64</a> (int64_t i)</td></tr>
+<tr class="memitem:a7847f74494645c2b076505c37cc4cb93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a7847f74494645c2b076505c37cc4cb93">json_object_new_int64</a> (<a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> i)</td></tr>
 <tr class="separator:a7847f74494645c2b076505c37cc4cb93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa602ee5f6182b35f3f75a927320b4efd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#aa602ee5f6182b35f3f75a927320b4efd">json_object_new_uint64</a> (uint64_t i)</td></tr>
+<tr class="memitem:aa602ee5f6182b35f3f75a927320b4efd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#aa602ee5f6182b35f3f75a927320b4efd">json_object_new_uint64</a> (<a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> i)</td></tr>
 <tr class="separator:aa602ee5f6182b35f3f75a927320b4efd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c56dc58a02f92cd6789ba5dcb9fe7b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a8c56dc58a02f92cd6789ba5dcb9fe7b1">json_object_get_int</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
+<tr class="memitem:a8c56dc58a02f92cd6789ba5dcb9fe7b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a8c56dc58a02f92cd6789ba5dcb9fe7b1">json_object_get_int</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
 <tr class="separator:a8c56dc58a02f92cd6789ba5dcb9fe7b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ab3568f12e01fd2967e765a72456caa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a4ab3568f12e01fd2967e765a72456caa">json_object_set_int</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, int new_value)</td></tr>
 <tr class="separator:a4ab3568f12e01fd2967e765a72456caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25691322b2d1ab24a3797e5752eb659f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a25691322b2d1ab24a3797e5752eb659f">json_object_int_inc</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, int64_t val)</td></tr>
+<tr class="memitem:a25691322b2d1ab24a3797e5752eb659f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a25691322b2d1ab24a3797e5752eb659f">json_object_int_inc</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, <a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> val)</td></tr>
 <tr class="separator:a25691322b2d1ab24a3797e5752eb659f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a14750b3af4df18ec8dc93b090a8e8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a1a14750b3af4df18ec8dc93b090a8e8a">json_object_get_int64</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
+<tr class="memitem:a1a14750b3af4df18ec8dc93b090a8e8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a1a14750b3af4df18ec8dc93b090a8e8a">json_object_get_int64</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
 <tr class="separator:a1a14750b3af4df18ec8dc93b090a8e8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82c27579b6d25d9d0eb3b72758d8b71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a82c27579b6d25d9d0eb3b72758d8b71d">json_object_get_uint64</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
+<tr class="memitem:a82c27579b6d25d9d0eb3b72758d8b71d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a82c27579b6d25d9d0eb3b72758d8b71d">json_object_get_uint64</a> (const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj)</td></tr>
 <tr class="separator:a82c27579b6d25d9d0eb3b72758d8b71d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3948600dde732abed0e261264ef53a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a7d3948600dde732abed0e261264ef53a">json_object_set_int64</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, int64_t new_value)</td></tr>
+<tr class="memitem:a7d3948600dde732abed0e261264ef53a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a7d3948600dde732abed0e261264ef53a">json_object_set_int64</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, <a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> new_value)</td></tr>
 <tr class="separator:a7d3948600dde732abed0e261264ef53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9900aa9a425e6f14e295b298460b65d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a9900aa9a425e6f14e295b298460b65d4">json_object_set_uint64</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, uint64_t new_value)</td></tr>
+<tr class="memitem:a9900aa9a425e6f14e295b298460b65d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a9900aa9a425e6f14e295b298460b65d4">json_object_set_uint64</a> (struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *obj, <a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> new_value)</td></tr>
 <tr class="separator:a9900aa9a425e6f14e295b298460b65d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a594a093bafb9091f843da3197e0638aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="json__object_8h.html#a594a093bafb9091f843da3197e0638aa">json_object_new_double</a> (double d)</td></tr>
 <tr class="separator:a594a093bafb9091f843da3197e0638aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,11 +237,24 @@ Variables</h2></td></tr>
           <td class="memname">#define JSON_C_CONST_FUNCTION</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">func </td><td>)</td>
+          <td class="paramname">func</td><td>)</td>
           <td>&#160;&#160;&#160;func</td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a4d303af657ca4ee8e487366ba9692c94"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JSON_C_OBJECT_ADD_CONSTANT_KEY&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A flag for the json_object_object_add_ex function which flags the key as being constant memory. This means that the key will NOT be copied via strdup(), resulting in a potentially huge performance win (malloc, strdup and free are usually performance hogs). It is acceptable to use this flag for keys in non-constant memory blocks if the caller ensure that the memory holding the key lives longer than the corresponding json object. However, this is somewhat dangerous and should only be done if really justified. The general use-case for this flag is cases where the key is given as a real constant value in the function call, e.g. as in json_object_object_add_ex(obj, "ip", json, JSON_C_OBJECT_ADD_CONSTANT_KEY); </p>
 
 </div>
 </div>
@@ -261,11 +276,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define JSON_C_OBJECT_KEY_IS_CONSTANT&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+          <td class="memname">#define JSON_C_OBJECT_KEY_IS_CONSTANT&#160;&#160;&#160;<a class="el" href="json__object_8h.html#a4d303af657ca4ee8e487366ba9692c94">JSON_C_OBJECT_ADD_CONSTANT_KEY</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>A flag for the json_object_object_add_ex function which flags the key as being constant memory. This means that the key will NOT be copied via strdup(), resulting in a potentially huge performance win (malloc, strdup and free are usually performance hogs). It is acceptable to use this flag for keys in non-constant memory blocks if the caller ensure that the memory holding the key lives longer than the corresponding json object. However, this is somewhat dangerous and should only be done if really justified. The general use-case for this flag is cases where the key is given as a real constant value in the function call, e.g. as in json_object_object_add_ex(obj, "ip", json, JSON_C_OBJECT_KEY_IS_CONSTANT); </p>
+<p>This flag is an alias to JSON_C_OBJECT_ADD_CONSTANT_KEY. Historically, this flag was used first and the new name JSON_C_OBJECT_ADD_CONSTANT_KEY was introduced for version 0.16.00 in order to have regular naming. Use of this flag is now legacy. </p>
 
 </div>
 </div>
@@ -294,6 +309,20 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Set a thread-local value of an option, overriding the global value. This will fail if json-c is not compiled with threading enabled, and with the __thread specifier (or equivalent) available.</p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="json__object_8h.html#ac099272b46fde595831118720b155656">json_c_set_serialization_double_format</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a195258c9acc1f8a216d7c9528b00d450"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define JSON_C_TO_STRING_COLOR&#160;&#160;&#160;(1 &lt;&lt; 5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>A flag for the <a class="el" href="json__object_8h.html#a9db613127bd4ef7db42307e43a85fc1b">json_object_to_json_string_ext()</a> and <a class="el" href="json__util_8h.html#a68a7385c555cf21797e361d1d4de3441">json_object_to_file_ext()</a> functions which causes the output to be formatted.</p>
+<p>Use color for printing json. </p>
 
 </div>
 </div>
@@ -346,7 +375,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>A flag for the <a class="el" href="json__object_8h.html#a9db613127bd4ef7db42307e43a85fc1b">json_object_to_json_string_ext()</a> and <a class="el" href="json__util_8h.html#a68a7385c555cf21797e361d1d4de3441">json_object_to_file_ext()</a> functions which causes the output to be formatted.</p>
-<p>See the "Two Space Tab" option at <a href="http://jsonformatter.curiousconcept.com/">http://jsonformatter.curiousconcept.com/</a> for an example of the format. </p>
+<p>See the "Two Space Tab" option at <a href="https://jsonformatter.curiousconcept.com/">https://jsonformatter.curiousconcept.com/</a> for an example of the format. </p>
 
 </div>
 </div>
@@ -422,10 +451,10 @@ Variables</h2></td></tr>
 <div class="line">        struct <a class="code" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914" title="The core type for all type of JSON objects handled by json-c.">json_object</a> *val = NULL;                                        \</div>
 <div class="line">        struct <a class="code" href="structlh__entry.html">lh_entry</a> *entry##key;                                           \</div>
 <div class="line">        struct <a class="code" href="structlh__entry.html">lh_entry</a> *entry_next##key = NULL;                               \</div>
-<div class="line">        for (entry##key = <a class="code" href="json__object_8h.html#a2caa52ae1863bd073444f3737138a4db">json_object_get_object</a>(obj)-&gt;head;                   \</div>
-<div class="line">             (entry##key ? (key = (<span class="keywordtype">char</span> *)<a class="code" href="linkhash_8h.html#a7579ce28b8366fc9b8656f14270aa3aa">lh_entry_k</a>(entry##key),              \</div>
-<div class="line">                           val = (<span class="keyword">struct </span><a class="code" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914" title="The core type for all type of JSON objects handled by json-c.">json_object</a> *)<a class="code" href="linkhash_8h.html#a0d4052ccfd8c5d351a9c1d3ba07671b3">lh_entry_v</a>(entry##key), \</div>
-<div class="line">                           entry_next##key = entry##key-&gt;next, entry##key)     \</div>
+<div class="line">        for (entry##key = <a class="code" href="linkhash_8h.html#a3bacf1f7c40830c20440fd95d493f35f">lh_table_head</a>(<a class="code" href="json__object_8h.html#a2caa52ae1863bd073444f3737138a4db">json_object_get_object</a>(obj));          \</div>
+<div class="line">             (entry##key ? (key = (<span class="keywordtype">char</span> *)<a class="code" href="linkhash_8h.html#a82e5d699ba2fd4c520352c003f8554a5">lh_entry_k</a>(entry##key),              \</div>
+<div class="line">                           val = (<span class="keyword">struct </span><a class="code" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914" title="The core type for all type of JSON objects handled by json-c.">json_object</a> *)<a class="code" href="linkhash_8h.html#ab163f65568af863f3738ccd05900745e">lh_entry_v</a>(entry##key), \</div>
+<div class="line">                           entry_next##key = <a class="code" href="linkhash_8h.html#a603f6f2cc6d292a160b09b357c7a0a69">lh_entry_next</a>(entry##key), entry##key)     \</div>
 <div class="line">                         : 0);                                                 \</div>
 <div class="line">             entry##key = entry_next##key)</div>
 </div><!-- fragment --><p>Iterate through all keys and values of an object.</p>
@@ -465,11 +494,11 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (iter.entry = <a class="code" href="json__object_8h.html#a2caa52ae1863bd073444f3737138a4db">json_object_get_object</a>(obj)-&gt;head;                                    \</div>
-<div class="line">             (iter.entry ? (iter.key = (<span class="keywordtype">char</span> *)<a class="code" href="linkhash_8h.html#a7579ce28b8366fc9b8656f14270aa3aa">lh_entry_k</a>(iter.entry),                          \</div>
-<div class="line">                           iter.val = (<span class="keyword">struct </span><a class="code" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914" title="The core type for all type of JSON objects handled by json-c.">json_object</a> *)<a class="code" href="linkhash_8h.html#a0d4052ccfd8c5d351a9c1d3ba07671b3">lh_entry_v</a>(iter.entry), iter.entry) \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">for</span> (iter.entry = <a class="code" href="linkhash_8h.html#a3bacf1f7c40830c20440fd95d493f35f">lh_table_head</a>(<a class="code" href="json__object_8h.html#a2caa52ae1863bd073444f3737138a4db">json_object_get_object</a>(obj));                                    \</div>
+<div class="line">             (iter.entry ? (iter.key = (<span class="keywordtype">char</span> *)<a class="code" href="linkhash_8h.html#a82e5d699ba2fd4c520352c003f8554a5">lh_entry_k</a>(iter.entry),                          \</div>
+<div class="line">                           iter.val = (<span class="keyword">struct </span><a class="code" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914" title="The core type for all type of JSON objects handled by json-c.">json_object</a> *)<a class="code" href="linkhash_8h.html#ab163f65568af863f3738ccd05900745e">lh_entry_v</a>(iter.entry), iter.entry) \</div>
 <div class="line">                         : 0);                                                                  \</div>
-<div class="line">             iter.entry = iter.entry-&gt;next)</div>
+<div class="line">             iter.entry = <a class="code" href="linkhash_8h.html#a603f6f2cc6d292a160b09b357c7a0a69">lh_entry_next</a>(iter.entry))</div>
 </div><!-- fragment --><p>Iterate through all keys and values of an object (ANSI C Safe) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -499,15 +528,15 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a class="anchor" id="a922b2d76c73da57174beec82d471743b"></a>
+<a class="anchor" id="af50be932ec85694ae40141b46901bd00"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">JSON_C_CONST_FUNCTION </td>
+          <td class="memname">size_t json_c_object_sizeof </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> size_t &#160;</td>
-          <td class="paramname"><em>json_c_object_sizeof</em>void</td><td>)</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -721,6 +750,49 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae40a00944afd41c9a463c6d9e8256f3b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int json_object_array_insert_idx </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>idx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td>
+          <td class="paramname"><em>val</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Insert an element at a specified index in an array (a json_object of type json_type_array)</p>
+<p>The reference count will <em>not</em> be incremented. This is to make adding fields to objects in code more compact. If you want to retain a reference to an added object you must wrap the passed object with json_object_get</p>
+<p>The array size will be automatically be expanded to the size of the index if the index is larger than the current size. If the index is within the existing array limits, then the element will be inserted and all elements will be shifted. This is the only difference between this function and <a class="el" href="json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad">json_object_array_put_idx()</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">obj</td><td>the json_object instance </td></tr>
+    <tr><td class="paramname">idx</td><td>the index to insert the element at </td></tr>
+    <tr><td class="paramname">val</td><td>the json_object to be added </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ab9ea8f9c72d5adf83fdcbfe69f97fa44"></a>
 <div class="memitem">
 <div class="memproto">
@@ -897,7 +969,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 if the copy went well, -1 if an error occured during copy or if the destination pointer is non-NULL </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if the copy went well, -1 if an error occurred during copy or if the destination pointer is non-NULL </dd></dl>
 
 </div>
 </div>
@@ -1022,7 +1094,7 @@ Variables</h2></td></tr>
 <ul>
 <li>Using an object field or array index (retrieved through <code><a class="el" href="json__object_8h.html#a1a097805abb53b4c8a60d573730a8939">json_object_object_get()</a></code> or <code><a class="el" href="json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19">json_object_array_get_idx()</a></code>) beyond the lifetime of the parent object.</li>
 <li>Detaching an object field or array index from its parent object (using <code><a class="el" href="json__object_8h.html#ac6605fdafca20bd5d33c84f4f80a3bda">json_object_object_del()</a></code> or <code><a class="el" href="json__object_8h.html#a722eca9f578704d3af38b97549242c1f">json_object_array_del_idx()</a></code>)</li>
-<li>Sharing a json_object with multiple (not necesarily parallel) threads of execution that all expect to free it (with <code><a class="el" href="json__object_8h.html#afabf61f932cd64a4122ca8092452eed5">json_object_put()</a></code>) when they're done.</li>
+<li>Sharing a json_object with multiple (not necessarily parallel) threads of execution that all expect to free it (with <code><a class="el" href="json__object_8h.html#afabf61f932cd64a4122ca8092452eed5">json_object_put()</a></code>) when they're done.</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1084,7 +1156,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Get the json_bool value of a json_object</p>
-<p>The type is coerced to a json_bool if the passed object is not a json_bool. integer and double objects will return 0 if there value is zero or 1 otherwise. If the passed object is a string it will return 1 if it has a non zero length. If any other object type is passed 1 will be returned if the object is not NULL.</p>
+<p>The type is coerced to a json_bool if the passed object is not a json_bool. integer and double objects will return 0 if there value is zero or 1 otherwise. If the passed object is a string it will return 1 if it has a non zero length. If any other object type is passed 0 will be returned, even non-empty json_type_array and json_type_object objects.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>the json_object instance </td></tr>
@@ -1128,7 +1200,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int32_t json_object_get_int </td>
+          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a> json_object_get_int </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -1154,7 +1226,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> int64_t json_object_get_int64 </td>
+          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a> json_object_get_int64 </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -1289,7 +1361,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> uint64_t json_object_get_uint64 </td>
+          <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> <a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a> json_object_get_uint64 </td>
           <td>(</td>
           <td class="paramtype">const struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a> *&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -1346,7 +1418,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td>
           <td class="paramname"><em>val</em>&#160;</td>
         </tr>
         <tr>
@@ -1365,7 +1437,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>1 if the increment succeded, 0 otherwise </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the increment succeeded, 0 otherwise </dd></dl>
 
 </div>
 </div>
@@ -1590,7 +1662,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a>* json_object_new_int </td>
           <td>(</td>
-          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#a37994e3b11c72957c6f454c6ec96d43d">int32_t</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1622,7 +1694,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a>* json_object_new_int64 </td>
           <td>(</td>
-          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1784,7 +1856,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="printbuf_8h.html#a2a31d5c00f3a4712f2d5d62aee66344e">JSON_EXPORT</a> struct <a class="el" href="json__types_8h.html#af27907ced0f5a43409ad96430fe0f914">json_object</a>* json_object_new_uint64 </td>
           <td>(</td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td>
           <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2199,7 +2271,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#a67a9885ef4908cb72ce26d75b694386c">int64_t</a>&#160;</td>
           <td class="paramname"><em>new_value</em>&#160;</td>
         </tr>
         <tr>
@@ -2359,7 +2431,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramtype"><a class="el" href="json__inttypes_8h.html#aec6fcb673ff035718c238c8c9d544c47">uint64_t</a>&#160;</td>
           <td class="paramname"><em>new_value</em>&#160;</td>
         </tr>
         <tr>
@@ -2591,7 +2663,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 15:11:19 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 12 2023 18:59:55 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

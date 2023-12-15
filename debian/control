@@ -4,7 +4,7 @@ Maintainer: Nicolas Mora <babelouest@debian.org>
 Build-Depends: debhelper-compat (= 13),
                cmake,
                doxygen,
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Section: libs
 Homepage: https://github.com/json-c/json-c/wiki
 Vcs-Git: https://salsa.debian.org/debian/json-c.git
@@ -24,6 +24,7 @@ Description: JSON manipulation library - shared library
 
 Package: libjson-c-dev
 Section: libdevel
+Multi-Arch: same
 Architecture: any
 Depends: libjson-c5 (= ${binary:Version}),
          ${misc:Depends}

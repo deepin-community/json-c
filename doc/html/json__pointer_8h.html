@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>json-c: /home/erh/json-c-0.15/json_pointer.h File Reference</title>
+<title>json-c: json_pointer.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">json-c
-   &#160;<span id="projectnumber">0.15</span>
+   &#160;<span id="projectnumber">0.17</span>
    </div>
   </td>
  </tr>
@@ -40,10 +40,6 @@
       <li><a href="globals.html"><span>Globals</span></a></li>
     </ul>
   </div>
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_71f13e590eb9d766c31051438785ada5.html">json-c-0.15</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
@@ -102,7 +98,6 @@ Functions</h2></td></tr>
 <p>Retrieves a JSON sub-object from inside another JSON object using the JSON pointer notation as defined in RFC 6901 <a href="https://tools.ietf.org/html/rfc6901">https://tools.ietf.org/html/rfc6901</a></p>
 <p>The returned JSON sub-object is equivalent to parsing manually the 'obj' JSON tree ; i.e. it's not a new object that is created, but rather a pointer inside the JSON tree.</p>
 <p>Internally, this is equivalent to doing a series of '<a class="el" href="json__object_8h.html#a1a097805abb53b4c8a60d573730a8939">json_object_object_get()</a>' and '<a class="el" href="json__object_8h.html#a676711a76545d4ec65cc75f100f5fd19">json_object_array_get_idx()</a>' along the given 'path'.</p>
-<p>Note that the 'path' string supports 'printf()' type arguments, so, whatever is added after the 'res' param will be treated as an argument for 'path' Example: json_pointer_get(obj, "/foo/%d/%s", &amp;res, 0, bar) This means, that you need to escape '' with '%' (just like in printf())</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>the json_object instance/tree from where to retrieve sub-objects </td></tr>
@@ -151,7 +146,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This is a variant of '<a class="el" href="json__pointer_8h.html#aff88937e32b0ba6ffbd07cb4b1919053">json_pointer_get()</a>' that supports printf() style arguments.</p>
-<p>Example: json_pointer_getf(obj, res, "/foo/%d/%s", 0, bak) This also means that you need to escape '' with '%' (just like in printf())</p>
+<p>Variable arguments go after the 'path_fmt' parameter.</p>
+<p>Example: json_pointer_getf(obj, res, "/foo/%d/%s", 0, "bar") This also means that you need to escape '' with '%' (just like in printf())</p>
 <p>Please take into consideration all recommended 'printf()' format security aspects when using this function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -198,7 +194,6 @@ Functions</h2></td></tr>
 <p>Note that 'obj' is a double pointer, mostly for the "" (empty string) case, where the entire JSON object would be replaced by 'value'. In the case of the "" path, the object at '*obj' will have it's refcount decremented with '<a class="el" href="json__object_8h.html#afabf61f932cd64a4122ca8092452eed5">json_object_put()</a>' and the 'value' object will be assigned to it.</p>
 <p>For other cases (JSON sub-objects) ownership of 'value' will be transferred into '*obj' via '<a class="el" href="json__object_8h.html#a27bd808a022251059a43f1f6370441cd">json_object_object_add()</a>' &amp; '<a class="el" href="json__object_8h.html#a1ac0ccdbc13a25da7d8b2dc9e421dfad">json_object_array_put_idx()</a>', so the only time the refcount should be decremented for 'value' is when the return value of '<a class="el" href="json__pointer_8h.html#aef0e651f63ce5ce35648503705e2586b">json_pointer_set()</a>' is negative (meaning the 'value' object did not get set into '*obj').</p>
 <p>That also implies that '<a class="el" href="json__pointer_8h.html#aef0e651f63ce5ce35648503705e2586b">json_pointer_set()</a>' does not do any refcount incrementing. (Just that single decrement that was mentioned above).</p>
-<p>Note that the 'path' string supports 'printf()' type arguments, so, whatever is added after the 'value' param will be treated as an argument for 'path' Example: json_pointer_set(obj, "/foo/%d/%s", value, 0, bak) This means, that you need to escape '' with '%' (just like in printf())</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">obj</td><td>the json_object instance/tree to which to add a sub-object </td></tr>
@@ -247,7 +242,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>This is a variant of '<a class="el" href="json__pointer_8h.html#aef0e651f63ce5ce35648503705e2586b">json_pointer_set()</a>' that supports printf() style arguments.</p>
-<p>Example: json_pointer_setf(obj, value, "/foo/%d/%s", 0, bak) This also means that you need to escape '' with '%' (just like in printf())</p>
+<p>Variable arguments go after the 'path_fmt' parameter.</p>
+<p>Example: json_pointer_setf(obj, value, "/foo/%d/%s", 0, "bar") This also means that you need to escape '' with '%' (just like in printf())</p>
 <p>Please take into consideration all recommended 'printf()' format security aspects when using this function.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -264,7 +260,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 15:11:19 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 12 2023 18:59:55 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
