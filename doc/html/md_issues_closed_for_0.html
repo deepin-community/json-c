@@ -17,7 +17,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">json-c
-   &#160;<span id="projectnumber">0.15</span>
+   &#160;<span id="projectnumber">0.17</span>
    </div>
   </td>
  </tr>
@@ -326,7 +326,7 @@ sed -e's,^\[ *\(.*\)\](https://api.github.com/.*/\([0-9].*\)),[Issue #\2](https:
 <li><a href="https://github.com/json-c/json-c/issues/387">Issue #387</a> - doc: Use other doxygen feature to specify mainpage \</li>
 <li><a href="https://github.com/json-c/json-c/issues/388">Issue #388</a> - json_object: Add size_t json_object_sizeof() \</li>
 <li><a href="https://github.com/json-c/json-c/issues/389">Issue #389</a> - json_object: Avoid double free (and thus a segfault) when ref_count gets &lt; 0 \</li>
-<li><a href="https://github.com/json-c/json-c/issues/390">Issue #390</a> - json_object: Add const size_t json_c_object_sizeof() \</li>
+<li><a href="https://github.com/json-c/json-c/issues/390">Issue #390</a> - json_object: Add const size_t <a class="el" href="json__object_8h.html#af50be932ec85694ae40141b46901bd00">json_c_object_sizeof()</a> \</li>
 <li><a href="https://github.com/json-c/json-c/issues/391">Issue #391</a> - Fix non-GNUC define for JSON_C_CONST_FUNCTION \</li>
 <li><a href="https://github.com/json-c/json-c/issues/392">Issue #392</a> - json_object: Avoid invalid free (and thus a segfault) when ref_count gets &lt; 0 \</li>
 <li><a href="https://github.com/json-c/json-c/issues/393">Issue #393</a> - json_object_private: Use unsigned 32-bit integer type for refcount \</li>
@@ -499,12 +499,281 @@ sed -e's,^\[ *\(.*\)\](https://api.github.com/.*/\([0-9].*\)),[Issue #\2](https:
 <li><a href="https://github.com/json-c/json-c/issues/578">Issue #578</a> - CMake: Install pkgconfig file in proper location by default \</li>
 <li><a href="https://github.com/json-c/json-c/issues/579">Issue #579</a> - Enforce strict prototypes. \</li>
 <li><a href="https://github.com/json-c/json-c/issues/580">Issue #580</a> - Fix CMake tests for enforced strict prototypes. \</li>
-<li><a href="https://github.com/json-c/json-c/issues/581">Issue #581</a> - CMakeLists: do not enforce strict prototypes on Windows. \ </li>
+<li><a href="https://github.com/json-c/json-c/issues/581">Issue #581</a> - CMakeLists: do not enforce strict prototypes on Windows. \</li>
+</ul>
+<p>This list was created with: </p>
+<pre class="fragment">curl "https://api.github.com/search/issues?q=repo%3Ajson-c%2Fjson-c+closed%3A&gt;2020-04-18+created%3A&lt;2020-07-23&amp;sort=created&amp;order=asc&amp;per_page=100&amp;page=1" &gt; issues1.out
+jq -r '.items[] | "[" + .title + "](" + .url + ")" | tostring' issues?.out &gt; issues.md
+sed -e's,^\[ *\(.*\)\](https://api.github.com/.*/\([0-9].*\)),* [Issue #\2](https://github.com/json-c/json-c/issues/\2) - \1,' -i issues.md
+#... manual editing ...
+</pre><hr/>
+<p>Issues and Pull Requests closed for the 0.15 release (since commit 31ab57ca, the 0.14 branch point, 2020-04-19)</p>
+<ul>
+<li><a href="https://github.com/json-c/json-c/issues/428">Issue #428</a> - Added new_null() function</li>
+<li><a href="https://github.com/json-c/json-c/issues/429">Issue #429</a> - Conflict of interest between JSON_C_TO_STRING_SPACED and JSON_C_TO_STRING_PRETTY</li>
+<li><a href="https://github.com/json-c/json-c/issues/451">Issue #451</a> - Add option to disable HAVE___THREAD</li>
+<li><a href="https://github.com/json-c/json-c/issues/471">Issue #471</a> - create folders with mode 0755 when building</li>
+<li><a href="https://github.com/json-c/json-c/issues/476">Issue #476</a> - Add new function named json_object_new_string_noalloc</li>
+<li><a href="https://github.com/json-c/json-c/issues/484">Issue #484</a> - Add support for uint64</li>
+<li><a href="https://github.com/json-c/json-c/issues/487">Issue #487</a> - Any plans to make new release? (0.14)</li>
+<li><a href="https://github.com/json-c/json-c/issues/493">Issue #493</a> - Kdopen rename library</li>
+<li><a href="https://github.com/json-c/json-c/issues/507">Issue #507</a> - Double value -1.0 converts to integer in <a class="el" href="json__object_8h.html#ab7390c22baa1700d977c2af6b22d43a4">json_object_to_json_string()</a></li>
+<li><a href="https://github.com/json-c/json-c/issues/508">Issue #508</a> - Recommend enabling the <code>-fPIC</code> compiler flag by default</li>
+<li><a href="https://github.com/json-c/json-c/issues/517">Issue #517</a> - Lja mods</li>
+<li><a href="https://github.com/json-c/json-c/issues/534">Issue #534</a> - Both json-c and json-glib have <a class="el" href="json__object_8h.html#af256a3a7910e271a2b9735e5044c3827">json_object_get_type()</a></li>
+<li><a href="https://github.com/json-c/json-c/issues/584">Issue #584</a> - CMake: SOVERSION and the major library VERSION need to be in lockstep.</li>
+<li><a href="https://github.com/json-c/json-c/issues/585">Issue #585</a> - CMake: Do not install config.h, as it is not a public header file.</li>
+<li><a href="https://github.com/json-c/json-c/issues/586">Issue #586</a> - 10796 Segmentation fault</li>
+<li><a href="https://github.com/json-c/json-c/issues/588">Issue #588</a> - Broken RDRAND causes infinite looping</li>
+<li><a href="https://github.com/json-c/json-c/issues/589">Issue #589</a> - Detect broken RDRAND during initialization</li>
+<li><a href="https://github.com/json-c/json-c/issues/590">Issue #590</a> - Fix segmentation fault in CPUID check</li>
+<li><a href="https://github.com/json-c/json-c/issues/591">Issue #591</a> - Update <a class="el" href="README_8md.html">README.md</a></li>
+<li><a href="https://github.com/json-c/json-c/issues/592">Issue #592</a> - Prevent out of boundary write on malicious input</li>
+<li><a href="https://github.com/json-c/json-c/issues/593">Issue #593</a> - Building both static and shared libraries</li>
+<li><a href="https://github.com/json-c/json-c/issues/594">Issue #594</a> - Some subsequent call of lh_get_hash not working</li>
+<li><a href="https://github.com/json-c/json-c/issues/595">Issue #595</a> - Support to build both static and shared libraries</li>
+<li><a href="https://github.com/json-c/json-c/issues/596">Issue #596</a> - QA Notice: Package triggers severe warnings</li>
+<li><a href="https://github.com/json-c/json-c/issues/597">Issue #597</a> - json_parse demo: fix and use usage() function</li>
+<li><a href="https://github.com/json-c/json-c/issues/598">Issue #598</a> - Turning off shared libs causes target duplication or build error</li>
+<li><a href="https://github.com/json-c/json-c/issues/599">Issue #599</a> - cannot add more than 11 objects. Is this a known issue?</li>
+<li><a href="https://github.com/json-c/json-c/issues/600">Issue #600</a> - Library name conflicts on Windows are back again</li>
+<li><a href="https://github.com/json-c/json-c/issues/601">Issue #601</a> - <a class="el" href="json__tokener_8h.html#a236ef64d079822a4411d13eae7190c4d">json_tokener_parse()</a> in master sets errno=1 "Operation not permitted"</li>
+<li><a href="https://github.com/json-c/json-c/issues/602">Issue #602</a> - fix <a class="el" href="json__util_8h.html#a94c2340c1344d57f7aa067f2dd0407f9">json_parse_uint64()</a> internal error checking with errno</li>
+<li><a href="https://github.com/json-c/json-c/issues/603">Issue #603</a> - Backport of fixes from master branch.</li>
+<li><a href="https://github.com/json-c/json-c/issues/604">Issue #604</a> - commit f2e991a3419ee4078e8915e840b1a0d9003b349e breaks cross-compilation with mingw</li>
+<li><a href="https://github.com/json-c/json-c/issues/605">Issue #605</a> - Update to 0.15 release</li>
+<li><a href="https://github.com/json-c/json-c/issues/606">Issue #606</a> - Improved support for IBM operating systems</li>
+<li><a href="https://github.com/json-c/json-c/issues/607">Issue #607</a> - json-c-0.13.x: Fix CVE-2020-12762 - json-c through 0.14 has an integer overflow and out-of-bounds write ...</li>
+<li><a href="https://github.com/json-c/json-c/issues/608">Issue #608</a> - json-c-0.14: Fix CVE-2020-12762 - json-c through 0.14 has an integer overflow and out-of-bounds write ...</li>
+<li><a href="https://github.com/json-c/json-c/issues/609">Issue #609</a> - use unsigned types for sizes in <a class="el" href="structlh__table.html">lh_table</a> and entries</li>
+<li><a href="https://github.com/json-c/json-c/issues/610">Issue #610</a> - let's not call lh_table_resize with INT_MAX</li>
+<li><a href="https://github.com/json-c/json-c/issues/611">Issue #611</a> - json-c-0.12.x: Fix CVE-2020-12762 - json-c through 0.14 has an integer overflow and out-of-bounds write ...</li>
+<li><a href="https://github.com/json-c/json-c/issues/613">Issue #613</a> - json-c-0.10: Fix CVE-2020-12762 - json-c through 0.14 has an integer overflow and out-of-bounds write ...</li>
+<li><a href="https://github.com/json-c/json-c/issues/614">Issue #614</a> - Prevent truncation on custom double formatters.</li>
+<li><a href="https://github.com/json-c/json-c/issues/615">Issue #615</a> - New release with security fix</li>
+<li><a href="https://github.com/json-c/json-c/issues/616">Issue #616</a> - Parsing fails if UTF-16 low surrogate pair is not in same chunk is the high pair</li>
+<li><a href="https://github.com/json-c/json-c/issues/617">Issue #617</a> - Add an option to disable the use of thread-local storage.</li>
+<li><a href="https://github.com/json-c/json-c/issues/618">Issue #618</a> - test_deep_copy: Fix assertion value.</li>
+<li><a href="https://github.com/json-c/json-c/issues/619">Issue #619</a> - CMake: Fix out-of-tree build for Doxygen documentation.</li>
+<li><a href="https://github.com/json-c/json-c/issues/621">Issue #621</a> - json-c and jansson libraries have symbol conflicts</li>
+<li><a href="https://github.com/json-c/json-c/issues/622">Issue #622</a> - doc: Move Doxyfile into doc subdir.</li>
+<li><a href="https://github.com/json-c/json-c/issues/623">Issue #623</a> - json_tokener_parse : Segmentation fault</li>
+<li><a href="https://github.com/json-c/json-c/issues/626">Issue #626</a> - Fixes for cmake 2.8.12 + link issue on AIX 6.1/cc 11.01</li>
+<li><a href="https://github.com/json-c/json-c/issues/627">Issue #627</a> - Compat fixes</li>
+<li><a href="https://github.com/json-c/json-c/issues/628">Issue #628</a> - get_cryptgenrandom_seed: compat with old windows + fallback</li>
+<li><a href="https://github.com/json-c/json-c/issues/629">Issue #629</a> - [0.12] Remove the Visual Studio project file</li>
+<li><a href="https://github.com/json-c/json-c/issues/630">Issue #630</a> - Linking with Windows MINGW not working</li>
+<li><a href="https://github.com/json-c/json-c/issues/632">Issue #632</a> - Json object split</li>
+<li><a href="https://github.com/json-c/json-c/issues/633">Issue #633</a> - fix issue 616: support the surrogate pair in split file.</li>
+<li><a href="https://github.com/json-c/json-c/issues/634">Issue #634</a> - Issue #508: <code>-fPIC</code> to link libjson-c.a with libs</li>
+<li><a href="https://github.com/json-c/json-c/issues/635">Issue #635</a> - expression has no effect warning in json_tokener.c</li>
+<li><a href="https://github.com/json-c/json-c/issues/636">Issue #636</a> - json_object_get_string free str memory</li>
+<li><a href="https://github.com/json-c/json-c/issues/637">Issue #637</a> - <a class="el" href="json__object_8h.html#afabf61f932cd64a4122ca8092452eed5">json_object_put()</a> has 'double free or corruption (out) '</li>
+<li><a href="https://github.com/json-c/json-c/issues/638">Issue #638</a> - json-c/json_object.c:50:2: error: #error Unable to determine size of ssize_t</li>
+<li><a href="https://github.com/json-c/json-c/issues/639">Issue #639</a> - build: Add a symbol version to all exported symbols</li>
+<li><a href="https://github.com/json-c/json-c/issues/640">Issue #640</a> - Fix build issues with SSIZE_MAX on 64bit Linux</li>
+<li><a href="https://github.com/json-c/json-c/issues/641">Issue #641</a> - Formal verification of your test suite</li>
+<li><a href="https://github.com/json-c/json-c/issues/642">Issue #642</a> - Please provide more precise informations about when to call json_object_put</li>
+<li><a href="https://github.com/json-c/json-c/issues/643">Issue #643</a> - not able to compare with string</li>
+<li><a href="https://github.com/json-c/json-c/issues/644">Issue #644</a> - Why src-&gt;_userdata not checked before calling strdup?</li>
+<li><a href="https://github.com/json-c/json-c/issues/645">Issue #645</a> - Misuse of tolower() in json_tokener.c</li>
+<li><a href="https://github.com/json-c/json-c/issues/646">Issue #646</a> - Cast to unsigned char instead of int when calling tolower (Fixes #645)</li>
+</ul>
+<p>This list was created with: </p>
+<pre class="fragment">PREV=2020-07-23
+NOW=2022-04-13
+curl "https://api.github.com/search/issues?q=repo%3Ajson-c%2Fjson-c+closed%3A&gt;${PREV}+created%3A&lt;${NOW}&amp;sort=created&amp;order=asc&amp;per_page=100&amp;page=1" &gt; issues1.out
+jq -r '.items[] | "[" + .title + "](" + .url + ")" | tostring' issues?.out &gt; issues.md
+sed -e's,^\[ *\(.*\)\](https://api.github.com/.*/\([0-9].*\)),* [Issue #\2](https://github.com/json-c/json-c/issues/\2) - \1,' -i issues.md
+cat issues.md &gt;&gt; issues_closed_for_0.16.md
+</pre><ul>
+<li><a href="https://github.com/json-c/json-c/issues/464">Issue #464</a> - Speed up parsing and object creation</li>
+<li><a href="https://github.com/json-c/json-c/issues/540">Issue #540</a> - request: json_init_library</li>
+<li><a href="https://github.com/json-c/json-c/issues/631">Issue #631</a> - New 0.14 release requests</li>
+<li><a href="https://github.com/json-c/json-c/issues/647">Issue #647</a> - "cmake -DCMAKE_BUILD_TYPE=Release" fails with error: 'cint64' may be used uninitialized</li>
+<li><a href="https://github.com/json-c/json-c/issues/648">Issue #648</a> - Fix "may be used uninitialized" Release build failure</li>
+<li><a href="https://github.com/json-c/json-c/issues/649">Issue #649</a> - json-c tag 0.15 tarball contains a file doc/Doxyfile and generated doxygen files in doc/html</li>
+<li><a href="https://github.com/json-c/json-c/issues/650">Issue #650</a> - README: fix spelling errors</li>
+<li><a href="https://github.com/json-c/json-c/issues/651">Issue #651</a> - Getrandom</li>
+<li><a href="https://github.com/json-c/json-c/issues/652">Issue #652</a> - Waste memory</li>
+<li><a href="https://github.com/json-c/json-c/issues/653">Issue #653</a> - Make the documentation build reproducibly</li>
+<li><a href="https://github.com/json-c/json-c/issues/654">Issue #654</a> - A stack-buffer-overflow in json_parse.c:89:44</li>
+<li><a href="https://github.com/json-c/json-c/issues/655">Issue #655</a> - json_parse: Fix read past end of buffer</li>
+<li><a href="https://github.com/json-c/json-c/issues/656">Issue #656</a> - Fixed warnings</li>
+<li><a href="https://github.com/json-c/json-c/issues/657">Issue #657</a> - Use GRND_NONBLOCK with getrandom.</li>
+<li><a href="https://github.com/json-c/json-c/issues/658">Issue #658</a> - <a class="el" href="json__object_8h.html#ac003fb99db7ecd674bb16d983d2f92ee">json_object_get_boolean()</a> returns wrong result for objects and arrays</li>
+<li><a href="https://github.com/json-c/json-c/issues/659">Issue #659</a> - fix <a class="el" href="json__object_8h.html#ac003fb99db7ecd674bb16d983d2f92ee">json_object_get_boolean()</a> to behave like documented</li>
+<li><a href="https://github.com/json-c/json-c/issues/660">Issue #660</a> - Validate size arguments in arraylist functions.</li>
+<li><a href="https://github.com/json-c/json-c/issues/661">Issue #661</a> - Cleanup of some code parts</li>
+<li><a href="https://github.com/json-c/json-c/issues/662">Issue #662</a> - Prevent signed overflow in get_time_seed</li>
+<li><a href="https://github.com/json-c/json-c/issues/663">Issue #663</a> - Properly format errnos in <em>json_c_strerror</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/664">Issue #664</a> - Limit strings at INT_MAX length</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/665">Issue #665</a> - Handle more allocation failures in json_tokener* functions</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/666">Issue #666</a> - test1 json_object_new_array_ext test is failing</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/667">Issue #667</a> - Fixed test1 regression.</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/670">Issue #670</a> - Created Stone-Paper-Scissor Game by C language</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/672">Issue #672</a> - Calling exit() after failure to generate random seed</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/673">Issue #673</a> - switchcasemenuproject</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/674">Issue #674</a> - random_seed: on error, continue to next method</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/682">Issue #682</a> - libjson-c-dev vs libjson-c3</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/683">Issue #683</a> - [Question] Is it possible to clear a ptr of json_object?</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/684">Issue #684</a> - json_tokener_parse_verbose failed with core dump</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/685">Issue #685</a> - json_tokener_parse memory leak?</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/689">Issue #689</a> - fix compilation with clang</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/690">Issue #690</a> - "1," produces an object with int 1; "1" produces a null object</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/691">Issue #691</a> - failed tests</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/692">Issue #692</a> - patch to add arc4random</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/693">Issue #693</a> - Optional parameter for packing as array</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/694">Issue #694</a> - fix invalid unsigned arithmetic.</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/695">Issue #695</a> - /tmp/json-c/random_seed.c:327:6: error</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/696">Issue #696</a> - To avoid target exe file export JSON functions.</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/697">Issue #697</a> - <a class="el" href="json__object_8h.html#a9ee29ca8d79896e15007131527f6002e">json_object_get_string()</a> return value truncated when assigning it to a pointer type in Win32 App</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/698">Issue #698</a> - Feature request: set allocator</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/699">Issue #699</a> - Linking to libjson-c Issue</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/700">Issue #700</a> - Fix unused variable for Win32 build in random_seed.c</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/701">Issue #701</a> - [RFC] json_pointer: allow the feature to be disabled</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/703">Issue #703</a> - Fix vasprintf fallback</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/706">Issue #706</a> - Check <b>STDC_VERSION</b> is defined before checking its value</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/707">Issue #707</a> - How to build json-c-0.15 for arm arch</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/708">Issue #708</a> - direct access to elements</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/709">Issue #709</a> - Include guards not namespaced / build errors for debug.h with openNDS</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/710">Issue #710</a> - 'file system sandbox blocked mmap()' error on iOS</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/711">Issue #711</a> - creating a json object</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/712">Issue #712</a> - building json-c using cmake for ESP32</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/713">Issue #713</a> - When value converted to char* can not compare it with another value</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/714">Issue #714</a> - Add AfterCaseLabel to .clang-format</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/716">Issue #716</a> - Fixed cmake command</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/717">Issue #717</a> - Cmake is able delete all files by "clean" target</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/718">Issue #718</a> - CMake create uninstall target if unix generator is used</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/719">Issue #719</a> - Parsing multiple JSON strings</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/722">Issue #722</a> - Fix use-after-free in <a class="el" href="json__tokener_8h.html#a6a1583ddd434e13515d6232de813462e">json_tokener_new_ex()</a></em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/723">Issue #723</a> - if set __stdcall (/Gz)</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/724">Issue #724</a> - #723</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/725">Issue #725</a> - <a class="el" href="json__util_8h.html#a03119ec0a71af4eee95318e9b2aaf05b">json_object_from_file()</a> execution segment error</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/726">Issue #726</a> - fix cmake version for tests</em></li>
+<li><em><a href="https://github.com/json-c/json-c/issues/727">Issue #727</a> - Really use prefix JSON_C_OBJECT_ADD</em></li>
+<li><a href="https://github.com/json-c/json-c/issues/728">Issue #728</a> - DRAFT PROPOSAL - Add option JSON_C_OBJECT_ADD_IF_NOT_NULL</li>
+<li><a href="https://github.com/json-c/json-c/issues/729">Issue #729</a> - * don't assume includedir</li>
+<li><a href="https://github.com/json-c/json-c/issues/731">Issue #731</a> - Json-c Error</li>
+<li><a href="https://github.com/json-c/json-c/issues/732">Issue #732</a> - Fix/static include dirs</li>
+<li><a href="https://github.com/json-c/json-c/issues/734">Issue #734</a> - Newer appveyor config for VS2022 etc...</li>
+<li><a href="https://github.com/json-c/json-c/issues/735">Issue #735</a> - Add policy_max to minimum required cmake version</li>
+<li><a href="https://github.com/json-c/json-c/issues/736">Issue #736</a> - json_object.c:308: json_object_put: Assertion `jso-&gt;_ref_count &gt; 0' failed</li>
+<li><a href="https://github.com/json-c/json-c/issues/737">Issue #737</a> - Fix typo in README</li>
+<li><a href="https://github.com/json-c/json-c/issues/738">Issue #738</a> - General question - Is there an SLA for handling newly detected security issues?</li>
+<li><a href="https://github.com/json-c/json-c/issues/739">Issue #739</a> - json_escape_str(): avoid harmless unsigned integer overflow</li>
+<li><a href="https://github.com/json-c/json-c/issues/741">Issue #741</a> - <a class="el" href="json__util_8h.html#a762aaf3df0a9c7b6919cdc1035348012">json_type_to_name()</a>: use correct printf() formatter</li>
+<li><a href="https://github.com/json-c/json-c/issues/742">Issue #742</a> - json_object_copy_serializer_data(): add assertion</li>
+<li><a href="https://github.com/json-c/json-c/issues/743">Issue #743</a> - Cmd adb root</li>
+<li><a href="https://github.com/json-c/json-c/issues/744">Issue #744</a> - Close file on error path.</li>
+<li><a href="https://github.com/json-c/json-c/issues/745">Issue #745</a> - vasprintf(): avoid out of memory accesses</li>
+<li><a href="https://github.com/json-c/json-c/issues/746">Issue #746</a> - Fix typos in code comments and ChangeLog</li>
+<li><a href="https://github.com/json-c/json-c/issues/747">Issue #747</a> - json_object_put: Assertion `jso-&gt;_ref_count &gt; 0' failed</li>
+<li><a href="https://github.com/json-c/json-c/issues/748">Issue #748</a> - <a class="el" href="printbuf_8h.html#a61f6bc0b1ca5787f0faca6799d61a0bb">sprintbuf()</a>: test for all vsnprintf error values</li>
+<li><a href="https://github.com/json-c/json-c/issues/749">Issue #749</a> - <a class="el" href="printbuf_8h.html#a61f6bc0b1ca5787f0faca6799d61a0bb">sprintbuf()</a>: handle printbuf_memappend errors</li>
+<li><a href="https://github.com/json-c/json-c/issues/750">Issue #750</a> - <a class="el" href="printbuf_8h.html#a93a27f4f8a092c58666724de23ae804d">printbuf_memset()</a>: set gaps to zero</li>
+<li><a href="https://github.com/json-c/json-c/issues/751">Issue #751</a> - printbuf: do not allow invalid arguments</li>
+<li><a href="https://github.com/json-c/json-c/issues/752">Issue #752</a> - Fix typos</li>
+<li><a href="https://github.com/json-c/json-c/issues/753">Issue #753</a> - CTest failed in MSVC build</li>
+<li><a href="https://github.com/json-c/json-c/issues/754">Issue #754</a> - Minor improvements to documentation</li>
+<li><a href="https://github.com/json-c/json-c/issues/755">Issue #755</a> - Fix error messages</li>
+<li><a href="https://github.com/json-c/json-c/issues/758">Issue #758</a> - Preserve context if out of memory</li>
+<li><a href="https://github.com/json-c/json-c/issues/760">Issue #760</a> - Code style: removed unneeded double-quotes</li>
+<li><a href="https://github.com/json-c/json-c/issues/761">Issue #761</a> - Last commit merged to master breaks compilation</li>
+<li><a href="https://github.com/json-c/json-c/issues/762">Issue #762</a> - how to merge two jsons by json-c</li>
+<li><a href="https://github.com/json-c/json-c/issues/763">Issue #763</a> - Question: sort_fn arguments</li>
+<li><a href="https://github.com/json-c/json-c/issues/764">Issue #764</a> - Make test fail on test case test_util_file</li>
+</ul>
+<p>This list was created with: </p>
+<pre class="fragment">PREV=2022-04-13
+NOW=2023-08-12
+curl "https://api.github.com/search/issues?q=repo%3Ajson-c%2Fjson-c+closed%3A&gt;${PREV}+created%3A&lt;${NOW}&amp;sort=created&amp;order=asc&amp;per_page=100&amp;page=1" &gt; issues1.out
+jq -r '.items[] | "[" + .title + "](" + .url + ")" | tostring' issues?.out &gt; issues.md
+sed -e's,^\[ *\(.*\)\](https://api.github.com/.*/\([0-9].*\)),* [Issue #\2](https://github.com/json-c/json-c/issues/\2) - \1,' -i issues.md
+cat issues.md &gt;&gt; issues_closed_for_0.17.md
+</pre><ul>
+<li><a href="https://github.com/json-c/json-c/issues/191">Issue #191</a> - Override int64 to only display uint64 strings</li>
+<li><a href="https://github.com/json-c/json-c/issues/537">Issue #537</a> - Replace '\0' only when parsing key, not change data in value.</li>
+<li><a href="https://github.com/json-c/json-c/issues/570">Issue #570</a> - Figure out what needs to be done with Android.configure.mk</li>
+<li><a href="https://github.com/json-c/json-c/issues/587">Issue #587</a> - Store the hashValue to avoid repeating the hash calculation during the hash resize.</li>
+<li><a href="https://github.com/json-c/json-c/issues/612">Issue #612</a> - json-c-0.11: Fix CVE-2020-12762 - json-c through 0.14 has an integer overflow and out-of-bounds write ...</li>
+<li><a href="https://github.com/json-c/json-c/issues/620">Issue #620</a> - Introduce json_object_new_string_{ext,noalloc}().</li>
+<li><a href="https://github.com/json-c/json-c/issues/624">Issue #624</a> - json-c-0.14: Detect broken RDRAND during initialization.</li>
+<li><a href="https://github.com/json-c/json-c/issues/625">Issue #625</a> - json-c-0.13.x: Detect broken RDRAND during initialization.</li>
+<li><a href="https://github.com/json-c/json-c/issues/668">Issue #668</a> - Memory usage regression due to newlocal() on older FreeBSD releases</li>
+<li><a href="https://github.com/json-c/json-c/issues/676">Issue #676</a> - dereferencing type-punned pointer might break strict-aliasing rules [-Werror=strict-aliasing]</li>
+<li><a href="https://github.com/json-c/json-c/issues/677">Issue #677</a> - Naming conflict when using both json-c and jansson</li>
+<li><a href="https://github.com/json-c/json-c/issues/679">Issue #679</a> - Let json-c be used with obsolete compilers</li>
+<li><a href="https://github.com/json-c/json-c/issues/681">Issue #681</a> - json_tokener_parse_ex: <code>null</code> (4 bytes) only parses as valid JSON when passed with null terminator (5 bytes). Documentation issue?</li>
+<li><a href="https://github.com/json-c/json-c/issues/686">Issue #686</a> - Remove dependency on libM::getrandom</li>
+<li><a href="https://github.com/json-c/json-c/issues/687">Issue #687</a> - Does not build on Apple Silicon M1</li>
+<li><a href="https://github.com/json-c/json-c/issues/688">Issue #688</a> - json-c-0.15-nodoc.tar.gz build fails</li>
+<li><a href="https://github.com/json-c/json-c/issues/702">Issue #702</a> - json_patch: add first implementation only with patch application</li>
+<li><a href="https://github.com/json-c/json-c/issues/704">Issue #704</a> - add <a class="el" href="json__object_8h.html#ae40a00944afd41c9a463c6d9e8256f3b">json_object_array_insert_idx()</a> + test-cases + fix json_pointer doc-strings</li>
+<li><a href="https://github.com/json-c/json-c/issues/705">Issue #705</a> - segmentation fault on json-c parsing methods in cross compiled target</li>
+<li><a href="https://github.com/json-c/json-c/issues/721">Issue #721</a> - cmake test fails with building json-c with icc</li>
+<li><a href="https://github.com/json-c/json-c/issues/730">Issue #730</a> - Need a comparison with other JSON libraries in C</li>
+<li><a href="https://github.com/json-c/json-c/issues/733">Issue #733</a> - Official release? 1.0?</li>
+<li><a href="https://github.com/json-c/json-c/issues/756">Issue #756</a> - Question: Is there any way to build this with Gnu Make?</li>
+<li><a href="https://github.com/json-c/json-c/issues/757">Issue #757</a> - json_object_from_fd_ex: fail if file is too large</li>
+<li><a href="https://github.com/json-c/json-c/issues/759">Issue #759</a> - json_tokener_parse_ex: handle out of memory errors</li>
+<li><a href="https://github.com/json-c/json-c/issues/766">Issue #766</a> - Some people have trouble with undefined references to arc4random</li>
+<li><a href="https://github.com/json-c/json-c/issues/767">Issue #767</a> - How to create a character array using json-c</li>
+<li><a href="https://github.com/json-c/json-c/issues/768">Issue #768</a> - commits from May 30, 2022 killed my docker build process</li>
+<li><a href="https://github.com/json-c/json-c/issues/769">Issue #769</a> - Issue #768</li>
+<li><a href="https://github.com/json-c/json-c/issues/770">Issue #770</a> - json_parse.c:170:13: error: this statement may fall through</li>
+<li><a href="https://github.com/json-c/json-c/issues/771">Issue #771</a> - fix fallthough warning</li>
+<li><a href="https://github.com/json-c/json-c/issues/772">Issue #772</a> - add JSON_C_TO_STRING_COLOR option</li>
+<li><a href="https://github.com/json-c/json-c/issues/773">Issue #773</a> - problem with u_int64_t</li>
+<li><a href="https://github.com/json-c/json-c/issues/774">Issue #774</a> - The function add_compile_options was added to CMake version 2.8.12 and later but your minimum is 2.8 which will not work</li>
+<li><a href="https://github.com/json-c/json-c/issues/775">Issue #775</a> - list(TRANSFORM ...) is not available prior to CMake 3.12.</li>
+<li><a href="https://github.com/json-c/json-c/issues/776">Issue #776</a> - Fix typo</li>
+<li><a href="https://github.com/json-c/json-c/issues/777">Issue #777</a> - Don't try to change locale when libc only supports the C locale</li>
+<li><a href="https://github.com/json-c/json-c/issues/778">Issue #778</a> - Do not insert newlines when converting empty arrays to json string and JSON_C_TO_STRING_PRETTY is used</li>
+<li><a href="https://github.com/json-c/json-c/issues/779">Issue #779</a> - Fix compiling for Android</li>
+<li><a href="https://github.com/json-c/json-c/issues/780">Issue #780</a> - Memory Leak when setting empty strings when c_string.pdata is used</li>
+<li><a href="https://github.com/json-c/json-c/issues/781">Issue #781</a> - Fix memory leak with emtpy strings in json_object_set_string</li>
+<li><a href="https://github.com/json-c/json-c/issues/782">Issue #782</a> - Fix typos found by codespell</li>
+<li><a href="https://github.com/json-c/json-c/issues/783">Issue #783</a> - Fix build with clang-15+</li>
+<li><a href="https://github.com/json-c/json-c/issues/784">Issue #784</a> - get_time_seed(): silence warning emitted by Coverity Scan static analyzer</li>
+<li><a href="https://github.com/json-c/json-c/issues/786">Issue #786</a> - ghpages update was not published for json-c-0.16</li>
+<li><a href="https://github.com/json-c/json-c/issues/787">Issue #787</a> - -static linker flag result in building failed</li>
+<li><a href="https://github.com/json-c/json-c/issues/788">Issue #788</a> - Clear sensitive information.</li>
+<li><a href="https://github.com/json-c/json-c/issues/789">Issue #789</a> - Unnecessary struct declaration and unsafe function usage</li>
+<li><a href="https://github.com/json-c/json-c/issues/790">Issue #790</a> - Small update to README file</li>
+<li><a href="https://github.com/json-c/json-c/issues/791">Issue #791</a> - json_object_object_foreach not ISO-C compliant</li>
+<li><a href="https://github.com/json-c/json-c/issues/792">Issue #792</a> - <code>json_object_get_int</code> does not set <code>EINVAL</code> on invalid string</li>
+<li><a href="https://github.com/json-c/json-c/issues/794">Issue #794</a> - replaced</li>
+<li><a href="https://github.com/json-c/json-c/issues/796">Issue #796</a> - Added Test for get int functions</li>
+<li><a href="https://github.com/json-c/json-c/issues/797">Issue #797</a> - make uninstall</li>
+<li><a href="https://github.com/json-c/json-c/issues/798">Issue #798</a> - API to deal with enums is missing</li>
+<li><a href="https://github.com/json-c/json-c/issues/799">Issue #799</a> - json_object_put: Assertion `jso-&gt;_ref_count &gt; 0' failed.</li>
+<li><a href="https://github.com/json-c/json-c/issues/800">Issue #800</a> - String converted to scientific notation</li>
+<li><a href="https://github.com/json-c/json-c/issues/801">Issue #801</a> - #error You do not have strncasecmp on your system.</li>
+<li><a href="https://github.com/json-c/json-c/issues/802">Issue #802</a> - Problem: modern CMake warns about version 2.8</li>
+<li><a href="https://github.com/json-c/json-c/issues/803">Issue #803</a> - Problem: confusing error message in snprintf_compat.h</li>
+<li><a href="https://github.com/json-c/json-c/issues/804">Issue #804</a> - Problem: cmake 3.25.1 warns about CMP0042 not being set</li>
+<li><a href="https://github.com/json-c/json-c/issues/806">Issue #806</a> - The problem is libjson-c.dylib incompatible with OS version</li>
+<li><a href="https://github.com/json-c/json-c/issues/807">Issue #807</a> - json simple parse syntax</li>
+<li><a href="https://github.com/json-c/json-c/issues/808">Issue #808</a> - iOS Build using cmake fails due to 64 to 32bits conversion precision loss</li>
+<li><a href="https://github.com/json-c/json-c/issues/809">Issue #809</a> - Feature request json_object_new_uint()</li>
+<li><a href="https://github.com/json-c/json-c/issues/810">Issue #810</a> - docs: update to Internet Standard reference</li>
+<li><a href="https://github.com/json-c/json-c/issues/811">Issue #811</a> - dependence on execution character set</li>
+<li><a href="https://github.com/json-c/json-c/issues/812">Issue #812</a> - Duplicate symbol when compiling with clang-cl</li>
+<li><a href="https://github.com/json-c/json-c/issues/813">Issue #813</a> - Build apps only in project itself.</li>
+<li><a href="https://github.com/json-c/json-c/issues/814">Issue #814</a> - Code execution order</li>
+<li><a href="https://github.com/json-c/json-c/issues/816">Issue #816</a> - Hi I need to generate libjson-c.so.3 and libjson-c.so.3.0.1, please help with steps</li>
+<li><a href="https://github.com/json-c/json-c/issues/818">Issue #818</a> - error: a function declaration without a prototype is deprecated in all versions of C</li>
+<li><a href="https://github.com/json-c/json-c/issues/819">Issue #819</a> - build with intel 2023 fails on vasprintf</li>
+<li><a href="https://github.com/json-c/json-c/issues/820">Issue #820</a> - ISO C forbids in</li>
+<li><a href="https://github.com/json-c/json-c/issues/821">Issue #821</a> - Any release planing for 0.17?</li>
+<li><a href="https://github.com/json-c/json-c/issues/822">Issue #822</a> - Added option to disable app build</li>
+<li><a href="https://github.com/json-c/json-c/issues/823">Issue #823</a> - Symbol not found during linking stage of libjson-c.so </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 26 2020 15:11:19 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Aug 12 2023 18:59:55 for json-c by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
