@@ -1,3 +1,42 @@
+json-c (0.17-1) unstable; urgency=medium
+
+  * New upstream version
+  * Update std-version to 4.6.2
+  * d/symbols: update symbols file
+  * d/patches: remove patch 0001-CMakeLists-use-GNUInstallDirs.patch
+    no longer required
+  * d/patches: refresh patches 0003-config-h.patch and 0002-doxygen.patch
+  * d/.gitlab-ci.yml: add gitlab ci script for salsa
+
+ -- Nicolas Mora <babelouest@debian.org>  Tue, 15 Aug 2023 16:13:54 -0400
+
+json-c (0.16-2) unstable; urgency=medium
+
+  * Update std-version to 4.6.1
+  * d/copyright: Update copyright year
+  * d/source: Add lintian-overrides due to false-positives in doc/html/
+
+ -- Nicolas Mora <babelouest@debian.org>  Sun, 02 Oct 2022 19:26:06 -0400
+
+json-c (0.16-1) unstable; urgency=medium
+
+  * Update watch file for new location
+  * Update std-version to 4.6.0
+  * New upstream version 0.16
+  * Refresh patch 0002-doxygen.patch and 0003-config-h.patch
+  * Drop old patches 0004-reproducible-build.patch and 608.patch part of new upstream codebase
+  * Refresh symbols
+  * Update copyright file
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Thu, 28 Apr 2022 11:26:15 +0200
+
+json-c (0.15-3) unstable; urgency=medium
+
+  * Mark dev package as M-A: same (Closes: #1009805)
+    - thanks Tomeu Vizoso for the hint.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Wed, 20 Apr 2022 09:02:05 +0200
+
 json-c (0.15-2) unstable; urgency=low
 
   [Debian Janitor]

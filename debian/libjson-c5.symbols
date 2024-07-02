@@ -3,7 +3,10 @@ libjson-c.so.5 libjson-c5 #MINVER#
 * Build-Depends-Package: libjson-c-dev
  JSONC_0.14@JSONC_0.14 0.15
  JSONC_0.15@JSONC_0.15 0.15
+ JSONC_0.16@JSONC_0.16 0.16
+ JSONC_0.17@JSONC_0.17 0.17
  JSONC_PRIVATE@JSONC_PRIVATE 0.15
+ _json_c_strerror@JSONC_PRIVATE 0.17
  array_list_add@JSONC_PRIVATE 0.15
  array_list_bsearch@JSONC_0.14 0.15
  array_list_del_idx@JSONC_PRIVATE 0.15
@@ -24,10 +27,12 @@ libjson-c.so.5 libjson-c5 #MINVER#
  json_c_visit@JSONC_0.14 0.15
  json_global_set_string_hash@JSONC_0.14 0.15
  json_hex_chars@JSONC_PRIVATE 0.15
+ json_number_chars@JSONC_0.14 0.17
  json_object_array_add@JSONC_0.14 0.15
  json_object_array_bsearch@JSONC_0.14 0.15
  json_object_array_del_idx@JSONC_0.14 0.15
  json_object_array_get_idx@JSONC_0.14 0.15
+ json_object_array_insert_idx@JSONC_0.17 0.17
  json_object_array_length@JSONC_0.14 0.15
  json_object_array_put_idx@JSONC_0.14 0.15
  json_object_array_shrink@JSONC_0.15 0.15
@@ -98,6 +103,7 @@ libjson-c.so.5 libjson-c5 #MINVER#
  json_parse_double@JSONC_PRIVATE 0.15
  json_parse_int64@JSONC_PRIVATE 0.15
  json_parse_uint64@JSONC_PRIVATE 0.15
+ json_patch_apply@JSONC_0.17 0.17
  json_pointer_get@JSONC_0.14 0.15
  json_pointer_getf@JSONC_0.14 0.15
  json_pointer_set@JSONC_0.14 0.15
