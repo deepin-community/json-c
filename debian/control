@@ -4,7 +4,7 @@ Maintainer: Nicolas Mora <babelouest@debian.org>
 Build-Depends: debhelper-compat (= 13),
                cmake,
                doxygen,
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Section: libs
 Homepage: https://github.com/json-c/json-c/wiki
 Vcs-Git: https://salsa.debian.org/debian/json-c.git

@@ -5,7 +5,7 @@ Forwarded: not-needed
 
 --- a/README.md
 +++ b/README.md
-@@ -53,13 +53,6 @@
+@@ -56,13 +56,6 @@
  If you already have json-c installed, see [Linking to `libjson-c`](#linking)
  for how to build and link your program against it.
  
@@ -16,6 +16,6 @@ Forwarded: not-needed
 -Test Status
 -* [Coveralls](https://coveralls.io/github/json-c/json-c?branch=master) [![Coverage Status](https://coveralls.io/repos/github/json-c/json-c/badge.svg?branch=master)](https://coveralls.io/github/json-c/json-c?branch=master)
 -
- ### Prerequisites: <a name="installprereq"></a>
+ <a name="installprereq"></a>
+ ### Prerequisites:
  
-  - `gcc`, `clang`, or another C compiler
