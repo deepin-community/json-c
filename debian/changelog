@@ -1,3 +1,14 @@
+json-c (0.18+ds-1) unstable; urgency=medium
+
+  * New upstream version
+  * d/watch: Repack source to ignore doc/html prebuilt files
+  * d/patches: Update 0002-doxygen.patch
+  * d/control: Update standards version to 4.7.0
+  * d/symbols: update symbols file
+  * d/source/lintian-overrides: Remove lintian-overrides
+
+ -- Nicolas Mora <babelouest@debian.org>  Thu, 19 Sep 2024 07:22:46 -0400
+
 json-c (0.17-1) unstable; urgency=medium
 
   * New upstream version

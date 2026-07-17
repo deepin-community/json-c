@@ -2,6 +2,8 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: json-c
 Upstream-Contact: <michael@metaparadigm.com>
 Source: https://github.com/json-c/json-c/wiki
+Files-Excluded: doc/html/*
+Comment: Ignore prebuilt documentation
 
 Files: *
 Copyright: 2004-2005, 2013 Metaparadigm Pte. Ltd. <michael@metaparadigm.com>,
